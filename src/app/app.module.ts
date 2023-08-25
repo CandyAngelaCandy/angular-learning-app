@@ -12,9 +12,10 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
-  declarations: [
+  declarations: [ //声明组件，指令和pipe
     AppComponent,
     ProductListComponent,
     ProductAlertsComponent,
@@ -22,14 +23,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     CartComponent,
     TopBarComponent,
     ShippingComponent,
+    HighlightDirective,
   ],
-  imports: [
+  imports: [ //需要的模块
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [],  //模块中提供的服务
+  bootstrap: [AppComponent]  //root component, ng insert in index.html
 })
 export class AppModule { }
